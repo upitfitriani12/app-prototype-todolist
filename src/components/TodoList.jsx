@@ -7,22 +7,24 @@ function TodoList({ setEditingTodo }) {
   const dispatch = useDispatch();
 
   return (
-    <ul>
-      {todos.map((todo) => (
-        <li key={todo.id}>
-          <input
-            type="checkbox"
-            checked={todo.completed}
-            onChange={() => dispatch(toggleTodo(todo.id))}
-          />
-          <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
-            {todo.text} ({todo.category})
-          </span>
-          <button onClick={() => setEditingTodo(todo)}>✏️</button>
-          <button onClick={() => dispatch(deleteTodo(todo.id))}>🗑️</button>
-        </li>
-      ))}
-    </ul>
+    <ul className="todo-list">
+  {todos.map((todo) => (
+    <li key={todo.id} className="todo-item">
+      <input
+        type="checkbox"
+        checked={todo.completed}
+        onChange={() => dispatch(toggleTodo(todo.id))}
+      />
+      <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+        {todo.text} ({todo.category})
+      </span>
+      <button onClick={() => setEditingTodo(todo)}>✏️</button>
+      <button className="delete-button" onClick={() => dispatch(deleteTodo(todo.id))}>
+        🗑️
+      </button>
+    </li>
+  ))}
+</ul>
   );
 }
 

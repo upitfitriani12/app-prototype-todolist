@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './pages/Home'; // atau sesuaikan path-nya jika beda folder
+import Home from './pages/Home'; 
 
 function App() {
   return <Home />;

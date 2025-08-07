@@ -32,20 +32,27 @@ function TodoForm({ editingTodo, setEditingTodo }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: 20 }}>
-      <input
-        type="text"
-        placeholder="Enter todo..."
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
-        <option value="general">General</option>
-        <option value="work">Work</option>
-        <option value="personal">Personal</option>
-      </select>
-      <button type="submit">{editingTodo ? 'Update' : 'Add'}</button>
-    </form>
+    <form onSubmit={handleSubmit} className="todo-form">
+  <input
+    type="text"
+    placeholder="Enter todo..."
+    value={text}
+    onChange={(e) => setText(e.target.value)}
+    className="input"
+  />
+  <select
+    value={category}
+    onChange={(e) => setCategory(e.target.value)}
+    className="input"
+  >
+    <option value="general">General</option>
+    <option value="work">Work</option>
+    <option value="personal">Personal</option>
+  </select>
+  <button type="submit" className="button">
+    {editingTodo ? 'Update' : 'Add'}
+  </button>
+</form>
   );
 }
 
