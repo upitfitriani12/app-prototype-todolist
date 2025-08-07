@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <div className="container">
-  <h1 className="title">My Todo App</h1>
+  <h1 className="title">My Todo App - Upit Fitriani</h1>
   <WeatherInfo />
   <TodoForm editingTodo={editingTodo} setEditingTodo={setEditingTodo} />
   <TodoList setEditingTodo={setEditingTodo} />

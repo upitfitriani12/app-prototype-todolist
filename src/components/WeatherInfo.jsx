@@ -13,7 +13,7 @@ const WeatherInfo = () => {
   }, [dispatch]);
 
   if (loading) return <Loader />;
-  if (!weather) return <p>Gagal memuat data cuaca</p>;
+  if (!weather) return <p>Jakarta, Indonesia</p>; 
 
   return (
     <div>
