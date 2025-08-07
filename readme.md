@@ -12,7 +12,7 @@
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/upitfitriani/todo-app.git
+   git clone https://github.com/upitfitriani12/app-prototype-todolist
 
 ## Screenshoot app
 ![alt text](image.png)
